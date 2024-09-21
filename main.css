@@ -15,7 +15,7 @@ body{
   height: 100vh;
   font-family: 'Arial', sans-serif;
   /* background-image: url(../images/ref.png); */
-  background-image: url(../images/safe.png);
+  background-image: url(safe.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -344,7 +344,7 @@ button:hover{
   }
 
   #change-unit{   
-    background-image: url(../images/fahrenheit.png);
+    background-image: url(fahrenheit.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
