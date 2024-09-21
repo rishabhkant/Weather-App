@@ -263,7 +263,7 @@ button:hover{
   }
   .container{
     height: 100%;
-    padding: 80px 40px;
+    padding: 25px 40px;
   }
 
   .city-weather-info{
@@ -283,7 +283,7 @@ button:hover{
   }
 
   .city-time{
-    margin: 25px 0px 0px 0px;
+    margin: 15px 0px 0px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -354,14 +354,14 @@ button:hover{
   }
 
   h2{
-    margin-top: 25px;
+    margin: 10px;
   }
 
   .city-weather-info{
-    width: 300px;
-    height: 280px;
-    margin-top: 30px;
-    padding: 60px 50px;
+    width: 280px;
+    height: 200px;
+    margin-top: 10px;
+    padding: 50px 60px !important;
     flex-direction: column;  justify-content: space-between;
   }
 
@@ -371,6 +371,7 @@ button:hover{
 
   .future-weather-forecast{
     font-size: 0.8rem;
+    height: 190px;
   }
 
 
