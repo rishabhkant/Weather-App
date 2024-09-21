@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="/public/styles/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <div class="container">
+
+      <div class="submit-city-info">
+
+        <div class="time-city-info">
+
+          <div class="city-info">
+
+            <div class="city-weather-info" id="city-weather-info">
+              
+              <!-- <div class="weather-info" id="weather-info">
+                <div>Humidity</div>
+                <div>50%</div>
+              </div>
+    
+              <div class="weather-info" id="weather-info">
+                <div>Wind</div>
+                <div>5km/h</div>
+              </div>
+    
+              <div class="weather-info" id="weather-info">
+                <div>Pressure</div>
+                <div>1000mb</div>
+              </div>
+    
+              <div class="weather-info" id="weather-info">
+                <div>Sunrise</div>
+                <div>06:00am</div>
+              </div>
+    
+              <div class="weather-info" id="weather-info">
+                <div>Sunset</div>
+                <div>07:14pm</div>
+              </div> -->
+
+              <!-- This will get replaced by JS -->
+    
+            </div>
+              
+          </div>
+          <div class="city-time">
+            <div class="time-zone" id="time-zone">-</div>
+            <div class="city-name" id="city-name">
+            <div class="country" id="country">-</div>
+
+              
+            </div>
+    
+            <div class="time" id="time">
+            00:00 <span id="pm-am">AM</span>
+            </div>
+    
+            <div id="date" class="date">
+              - 
+            </div>
+    
+          </div>
+          
+        </div>
+        
+  
+        <!-- This block of code takes input from user and works fine -->
+        <div class="search-bar">
+          <form id="search-form">
+            <input type="text" id="search-input" placeholder="Enter a city name">
+            <div class="btns">
+              <button class="btn but" type="submit">Submit</button>
+              <button class="but" id="change-unit" type="submit">Change Unit</button>
+            </div>
+            
+          </form>
+        </div>
+
+      </div>
+
+
+      <div class="forecasts forecast-container">
+        <h2>Weather Forecast</h2>
+        <div class="weather-forecast" id="weather-forecast" >
+  
+          <div class="future-weather-forecast"  id="future-weather-forecast">          
+            <div class="night">Someday</div>
+            <img class="t-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
+            <div class="temperatureDay" id="temperatureDay">-° CC</div>
+            <div class="temperatureNight" id="temperatureNight">-° C</div>
+          </div>
+  
+          <div class="future-weather-forecast" id="future-weather-forecast">          
+            <div class="night">Someday</div>
+            <img class="t-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
+            <div class="temperatureDay" id="temperatureDay">-° C</div>
+            <div class="temperatureNight" id="temperatureNight">-° C</div>
+          </div>
+  
+          <div class="future-weather-forecast" id="future-weather-forecast">          
+            <div class="night">Someday</div>
+            <img class="t-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
+            <div class="temperatureDay" id="temperatureDay">-° C</div>
+            <div class="temperatureNight" id="temperatureNight">-° C</div>
+          </div>
+  
+          <div class="future-weather-forecast" id="future-weather-forecast">          
+            <div class="night">Someday</div>
+            <img class="t-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
+            <div class="temperatureDay" id="temperatureDay">-° C</div>
+            <div class="temperatureNight" id="temperatureNight">-° C</div>
+          </div>
+  
+          <div class="future-weather-forecast" id="future-weather-forecast">          
+            <div class="night">Someday</div>
+            <img class="t-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
+            <div class="temperatureDay" id="temperatureDay">-° C</div>
+            <div class="temperatureNight" id="temperatureNight">-° C</div>
+          </div>
+  
+          <div class="future-weather-forecast" id="future-weather-forecast">          
+            <div class="night">Someday</div>
+            <img class="t-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
+            <div class="temperatureDay" id="temperatureDay">-° C</div>
+            <div class="temperatureNight" id="temperatureNight">-° C</div>
+          </div>
+
+          <div class="future-weather-forecast" id="future-weather-forecast">          
+            <div class="night">Someday</div>
+            <img class="t-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
+            <div class="temperatureDay" id="temperatureDay">-° C</div>
+            <div class="temperatureNight" id="temperatureNight">-° C</div>
+          </div>
+
+          <div class="future-weather-forecast" id="future-weather-forecast">          
+            <div class="night">Someday</div>
+            <img class="t-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
+            <div class="temperatureDay" id="temperatureDay">-° C</div>
+            <div class="temperatureNight" id="temperatureNight">-° C</div>
+          </div>
+  
+        </div>
+      </div>
+
+    </div>
+    <script src="../app.js"></script>
+</body>
+</html>
