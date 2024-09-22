@@ -378,7 +378,7 @@ button:hover{
 }
 
 
-@media only screen and (max-width: 640px) {
+@media (min-width: 380px) and (max-width: 640px) {
 
   body{
     height: 100vh;
@@ -482,7 +482,8 @@ button:hover{
   }
 
   h2{
-    margin: 30px 50px;
+    margin: 30px 80px;
+    font-size: large;
   }
 
   .city-weather-info{
@@ -501,7 +502,7 @@ button:hover{
   .future-weather-forecast{
     font-size: 0.8rem;
     height: 190px;
-  }
 
+  }
 
 }
