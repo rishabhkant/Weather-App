@@ -43,31 +43,38 @@ setInterval(() => {
 
 
 function getWeatherDate(){
-    navigator.geolocation.getCurrentPosition((success) => {
-        //  console.log(success);
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((success) => {
+            //  console.log(success);
+            //object destructuring
 
-         //object destructuring
+            let {latitude, longitude} = success.coords;
+            //  console.log(latitude, longitude);
 
-         let {latitude, longitude} = success.coords;
-        //  console.log(latitude, longitude);
-
-         fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely,hourly,alerts&units=metric&appid=${apiKey}`)
-         .then(res => res.json())
-         .then(data =>{
-            console.log(data);
-            showWeatherData(data);
-            // timezone.innerHTML = data.timezone; //calling showWeatherData function with data parameter
-         })
-
-         fetch(`https://api.geoapify.com/v1/geocode/reverse?lat=${latitude}&lon=${longitude}&apiKey=${timeZoneApiKey}`)
-         .then(response => response.json())
-         .then(result =>{
-            // console.log(result);
-            country.innerHTML = result.features[0].properties.city + `, ` + result.features[0].properties.country;
-            timezone.innerHTML = result.features[0].properties.timezone.name + `, ` + result.features[0].properties.timezone.offset_DST;
+            fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely,hourly,alerts&units=metric&appid=${apiKey}`)
+            .then(res => res.json())
+            .then(data =>{
+                console.log(data);
+                showWeatherData(data);
+                // timezone.innerHTML = data.timezone; //calling showWeatherData function with data parameter
             })
-         .catch(error => console.log('error', error));
-    });
+
+            fetch(`https://api.geoapify.com/v1/geocode/reverse?lat=${latitude}&lon=${longitude}&apiKey=${timeZoneApiKey}`)
+            .then(response => response.json())
+            .then(result =>{
+                // console.log(result);
+                country.innerHTML = result.features[0].properties.city + `, ` + result.features[0].properties.country;
+                timezone.innerHTML = result.features[0].properties.timezone.name + `, ` + result.features[0].properties.timezone.offset_DST;
+                })
+            .catch(error => console.log('error', error));
+        }, (error) => {
+            console.log(error);
+            alert('Please allow location access');
+        });
+    } else {
+        alert('Please allow location access (the search function still works)');
+        console.log('Geolocation is not supported by your browser');
+    }
 }
 //calling getWeatherDate function to get weather data
 getWeatherDate();
