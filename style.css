@@ -442,7 +442,7 @@ button:hover{
   }
   .container{
     height: 100%;
-    padding: 25px 40px;
+    padding: 15px 40px;
   }
 
   .submit-city-info{
@@ -559,7 +559,7 @@ button:hover{
 
   .future-weather-forecast{
     width: 300px;
-    height: 42px;
+    height: 38px;
     font-size: 0.6rem;  
     display: flex !important;
     flex-direction: row;
@@ -582,7 +582,7 @@ button:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: auto;
+    overflow: auto;
   }
 
   .t-icon{
@@ -739,13 +739,13 @@ button:hover{
 @media(min-width: 1024px) and (max-width: 1367px){
 
   .container{
-    padding: 135px 95px;
+    padding: 90px 95px;
   }
 
   .city-weather-info{
     width: 32vh;
-    height: 25vh;
-    padding: 69px;
+    height: 210px;
+    padding: 10px 80px !important;
   }
 
   #search-input{
@@ -768,19 +768,15 @@ button:hover{
     margin-top: 50px;
   }
 
-  #search-input{
-    width: 180px;
-  }
-
   .country{
     font-size: 2.5rem;
   }
 
-  .city-weather-info{ 
-    width: 300px !important;
-    height: 210px;
-    padding: 10px 80px !important;
+  .weather-info{
+    font-size: 0.9rem;
+    width: 25vh;
   }
+
 }
 
 
