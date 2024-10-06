@@ -14,12 +14,11 @@ h2{
 body{
   height: 100vh;
   font-family: 'Arial', sans-serif;
-  /* background-image: url(../images/ref.png); */
   background-image: url(safe.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  overflow: hidden;
+  background-attachment: fixed;
 }
 
 .container{
@@ -97,7 +96,7 @@ body{
 }
 
 #search-input:focus{
-  box-shadow: 0px 0px 0px 1.5px rgb(206, 206, 206) inset;
+  box-shadow: 0px 0px 0px 1px rgb(206, 206, 206) inset;
 }
 
 #search-input:focus::placeholder{
@@ -260,7 +259,7 @@ button:hover{
 
   body{
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   .container{
     height: 100%;
@@ -321,40 +320,25 @@ button:hover{
 
   #search-input{
     text-align: center;
-    width: 220px;
+    width: 260px;
   }
 
   .btns{
-    width: 45px;
-    height: 40px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-left: 1px;
+    width: 0px;
+    height: 0px;
   }
 
   .btn{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-image: url(search\ \(1\).png);
-    background-color: rgba(0, 255, 255, 0);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    width: 0px;
+    height: 0px;
     text-indent: -9999px;
-    padding: 2px;
   }
 
- 
 
   button{
     text-align: center;
-    margin: 0;;
     background-color: #5f9e3500;
     border-radius: 50%;
-    -webkit-tap-highlight-color: transparent;
   } 
 
   button:hover,
@@ -439,6 +423,7 @@ button:hover{
   body{
     height: 100vh;
     overflow: hidden;
+    background-attachment: fixed;
   }
   .container{
     height: 100%;
@@ -593,6 +578,13 @@ button:hover{
 
 
 @media(min-width: 768px) and (max-width: 1024px){
+
+  body{
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    background-attachment: fixed;
+  }
+
   .container{
     padding: 95px 95px;
   }

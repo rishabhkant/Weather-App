@@ -37,7 +37,7 @@ setInterval(() => {
     const hours = hoursHours < 10 ? '0' + hoursHours : hoursHours; 
     const minutes_ = minutes < 10 ? '0' + minutes : minutes; //converting the time to 12 hour format with 0 in front of single digit
     
-    timeA1.innerHTML = `${hours}:${minutes_} <span id="pm-am">${amPm}</span>` //Changing time of the HTML from JS
+    timeA1.innerHTML = `${hours}:${minutes_} <span id="pm-am">${amPm} IST</span>` //Changing time of the HTML from JS
     dateA1.innerHTML = `${days[day]}, ${date} ${months[month]}`
 }, 1000);
 
@@ -175,7 +175,7 @@ function showWeatherData(data){
 
 
 const searchData = document.getElementById('search-form');
-searchData.addEventListener('submit', (e) => {
+searchData.addEventListener('submit' , (e) => {
     e.preventDefault();
     const location = document.getElementById('search-input').value.trim();
     if(location){
